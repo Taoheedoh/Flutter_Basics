@@ -13,21 +13,23 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       home: Scaffold(
         appBar: AppBar(
-          title: Text('Flutter Basics'),
+          title: const Text('Flutter Basics'),
         ),
-        body: Text('Body'),
+        body: const Text('Body'),
         bottomNavigationBar: BottomNavigationBar(
-           items: [
+          items: const [
             BottomNavigationBarItem(
               label: 'Home',
-              icon: Icon(Icons.home) 
+              icon: Icon(
+                Icons.home,
+                color: Color.fromARGB(255, 67, 30, 233),
+                size: 24.0,
+                semanticLabel: 'Text to announce in accessibility modes',
               ),
-              
-              BottomNavigationBarItem(
-              label: 'Settings',
-              icon: Icon(Icons.settings)
-        )
-        ],
+            ),
+            BottomNavigationBarItem(
+                label: 'Settings', icon: Icon(Icons.settings))
+          ],
         ),
       ),
     );
