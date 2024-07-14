@@ -15,7 +15,12 @@ class MyApp extends StatelessWidget {
         appBar: AppBar(
           title: const Text('Flutter Basics'),
         ),
-        body: const Text('Body'),
+        body: Center(
+          child: ElevatedButton(
+            onPressed: () {},
+            child: const Text('Click'),
+          ),
+        ),
         bottomNavigationBar: BottomNavigationBar(
           items: const [
             BottomNavigationBarItem(
