@@ -17,7 +17,9 @@ class MyApp extends StatelessWidget {
         ),
         body: Center(
           child: ElevatedButton(
-            onPressed: () {},
+            onPressed: () {
+              print('Print something');
+            },
             child: const Text('Click'),
           ),
         ),
