@@ -26,7 +26,7 @@ class _MyAppState extends State<MyApp> {
         body: Center(
           child: SizedBox(
             width: double.infinity,
-            child: Column(
+            child: Row(
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
@@ -44,6 +44,10 @@ class _MyAppState extends State<MyApp> {
                 ),
             
                 ElevatedButton(
+                  style: ElevatedButton.styleFrom(
+                    foregroundColor: Colors.orange,
+                    backgroundColor: Colors.black,
+                  ),
                   onPressed: () {
                     setState(() {
                       buttonName = 'Clicked';
