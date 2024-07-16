@@ -24,11 +24,13 @@ class _MyAppState extends State<MyApp> {
           title: const Text('Flutter Basics'),
         ),
         body: Center(
-          child: SizedBox(
+          child: Container(
             width: double.infinity,
+            height: double.infinity,
+            color: Colors.red,
             child: Row(
               mainAxisAlignment: MainAxisAlignment.center,
-              crossAxisAlignment: CrossAxisAlignment.start,
+              crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 ElevatedButton(
                   style: ElevatedButton.styleFrom(
