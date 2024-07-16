@@ -24,43 +24,43 @@ class _MyAppState extends State<MyApp> {
           title: const Text('Flutter Basics'),
         ),
         body: Center(
-          child: Container(
-            width: double.infinity,
-            height: double.infinity,
-            color: Colors.red,
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: [
-                ElevatedButton(
-                  style: ElevatedButton.styleFrom(
-                    foregroundColor: Colors.white,
-                    backgroundColor:  Colors.green,
+          child: currentIndex == 0
+              ? Container(
+                  width: double.infinity,
+                  height: double.infinity,
+                  color: Colors.red,
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: [
+                      ElevatedButton(
+                        style: ElevatedButton.styleFrom(
+                          foregroundColor: Colors.white,
+                          backgroundColor: Colors.green,
+                        ),
+                        onPressed: () {
+                          setState(() {
+                            buttonName = 'Clicked';
+                          });
+                        },
+                        child: Text(buttonName),
+                      ),
+                      ElevatedButton(
+                        style: ElevatedButton.styleFrom(
+                          foregroundColor: Colors.orange,
+                          backgroundColor: Colors.black,
+                        ),
+                        onPressed: () {
+                          setState(() {
+                            buttonName = 'Clicked';
+                          });
+                        },
+                        child: Text(buttonName),
+                      ),
+                    ],
                   ),
-                  onPressed: () {
-                    setState(() {
-                      buttonName = 'Clicked';
-                    });
-                  },
-                  child: Text(buttonName),
-                ),
-            
-                ElevatedButton(
-                  style: ElevatedButton.styleFrom(
-                    foregroundColor: Colors.orange,
-                    backgroundColor: Colors.black,
-                  ),
-                  onPressed: () {
-                    setState(() {
-                      buttonName = 'Clicked';
-                    });
-                  },
-                  child: Text(buttonName),
-                ),
-            
-              ],
-            ),
-          ),
+                )
+              : const SizedBox(),
         ),
         bottomNavigationBar: BottomNavigationBar(
           items: const [
