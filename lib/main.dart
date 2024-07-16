@@ -31,6 +31,10 @@ class _MyAppState extends State<MyApp> {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 ElevatedButton(
+                  style: ElevatedButton.styleFrom(
+                    foregroundColor: Colors.white,
+                    backgroundColor:  Colors.green,
+                  ),
                   onPressed: () {
                     setState(() {
                       buttonName = 'Clicked';
