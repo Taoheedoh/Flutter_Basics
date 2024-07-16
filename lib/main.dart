@@ -60,7 +60,7 @@ class _MyAppState extends State<MyApp> {
                     ],
                   ),
                 )
-              : const SizedBox(),
+              : Image.network('https://th.bing.com/th/id/OIP.AhHh7DEZecCyMTGhNsL9agHaEZ?w=265&h=180&c=7&r=0&o=5&dpr=1.5&pid=1.7'),
         ),
         bottomNavigationBar: BottomNavigationBar(
           items: const [
