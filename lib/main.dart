@@ -70,7 +70,7 @@ class _MyAppExtState extends State<MyAppExt> {
                         onPressed: () {
                           Navigator.of(context).push(
                             MaterialPageRoute(
-                              builder: (contexty) =>
+                              builder: (context) =>
                                   const NextPage(),
                             ),
                           );
