@@ -12,14 +12,31 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
-  String buttonName = 'Click';
-  int currentIndex = 0;
+  
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: Scaffold(
+      home: MyAppExt(),
+    );
+  }
+}
+
+class MyAppExt extends StatefulWidget {
+  const MyAppExt({super.key});
+
+  @override
+  State<MyAppExt> createState() => _MyAppExtState();
+}
+
+class _MyAppExtState extends State<MyAppExt> {
+
+  String buttonName = 'Click';
+  int currentIndex = 0;
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
         appBar: AppBar(
           title: const Text('Flutter Basics'),
         ),
@@ -51,11 +68,14 @@ class _MyAppState extends State<MyApp> {
                           backgroundColor: Colors.black,
                         ),
                         onPressed: () {
-                          setState(() {
-                            buttonName = 'Clicked';
-                          });
+                          Navigator.of(context).push(
+                            MaterialPageRoute(
+                              builder: (contexty) =>
+                                  const NextPage(),
+                            ),
+                          );
                         },
-                        child: Text(buttonName),
+                        child: const Text('Next Page'),
                       ),
                     ],
                   ),
@@ -85,7 +105,17 @@ class _MyAppState extends State<MyApp> {
             });
           },
         ),
-      ),
+      );
+  }
+}
+
+class NextPage extends StatelessWidget {
+  const NextPage({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(),
     );
   }
 }
